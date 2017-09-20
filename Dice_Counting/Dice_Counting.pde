@@ -34,24 +34,11 @@ class Die
 }
 void show()
 {
-  int rollDots = 0;
   noStroke();
   fill(255);
   rect(myX - 22, myY - 25, 40, 40);
   fill(0);
-  
-  while (rollDots < rollNum && rollDots < 3 ){
-  ellipse(myX - 10, myY - 15 + (rollDots*10), 10, 10);
-  rollDots += 1;
-  }
-  while (rollDots < rollNum && rollDots > 2 ) {
-  ellipse(myX + 5, myY - 45 + (rollDots*10), 10, 10);
-  rollDots += 1;
-  }
-  
-  
+  text(rollNum, myX, myY);
   rollNumTotal = rollNum + rollNumTotal;
-
-
 }
 }
